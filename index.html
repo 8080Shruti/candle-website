@@ -1,30 +1,52 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Flameies - Home</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flameies - Handcrafted Candles</title>
+
+  <!-- Fonts & CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- JavaScript -->
+  <script defer src="script.js"></script>
 </head>
 <body>
+  <!-- Header -->
   <header>
-  <img src="logo.png.jpeg" alt="Flameies Logo" class="logo" style="height: 50px; vertical-align: middle;">
-  <h1 style="display: inline; margin-left: 10px;">Flameies</h1>
-  <nav style="float: right;">
-    <a href="index.html">Home</a>
-    <a href="products.html">Products</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+    <div class="logo">
+  <img src="images/logo.png" alt="Flameies Logo" width="100" height="auto">
+  <h1>Flameies</h1>
+</div>
 
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart (<span id="cartCount">0</span>)</a>
+      <a href="wishlist.html">Wishlist</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-  <main>
-    <h2>Welcome to Flameies</h2>
-    <p>We craft handmade, aromatic candles for relaxation, decoration, and gifts.</p>
-    <img src="https://images.unsplash.com/photo-1587309641915-6db4b2ddf60d?fit=crop&w=800&q=80" alt="candles" width="500" style="border-radius: 10px; margin-top: 20px;">
+  <!-- Hero Section -->
+  <main class="hero">
+    <h2>Glow Naturally</h2>
+    <p>Explore our range of aromatic, eco-friendly handcrafted candles made with love.</p>
+    <a href="products.html" class="btn">Shop Now</a>
   </main>
 
+  <!-- Search Bar -->
+  <section class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search for candles..." />
+    <button id="searchButton">Search</button>
+  </section>
+
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Flameies. All rights reserved.</p>
+    <p><a href="mailto:support@flameies.in">support@flameies.in</a></p>
   </footer>
 </body>
 </html>
