@@ -1,41 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>GlowCandle - Products</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flameies - Products</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
 </head>
 <body>
+
   <header>
-    <h1>Our Candles</h1>
+    <div class="logo">
+      <img src="images/logo.png.jpeg">
+      <h1>Flameies</h1>
+    </div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="cart.html">Cart</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <div class="product-grid">
+  <main class="products-page">
+    <h2>Our Bestsellers</h2>
+    
+    <div class="products-grid">
+
       <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1612198736684-f57b7fc508fc?fit=crop&w=500&q=80" alt="Vanilla Candle">
-        <h3>Vanilla Bliss</h3>
-        <p>Warm, comforting scent of vanilla. 200g – ₹299</p>
+        <img src="images\image1.png.png" alt="Lavender Bliss Candle">
+        <h3>Lavender Bliss</h3>
+        <p>₹299</p>
+        <div class="rating">⭐ 4.8</div>
+        <button class="btn">Add to Cart</button>
+        <button class="wishlist">♡ Wishlist</button>
       </div>
+
       <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1616587228316-ec9670c22fc3?fit=crop&w=500&q=80" alt="Lavender Candle">
-        <h3>Lavender Calm</h3>
-        <p>Relaxing lavender aroma to ease stress. 250g – ₹349</p>
+        <img src="images/image2.png.png" alt="Vanilla Dream Candle">
+        <h3>Vanilla Dream</h3>
+        <p>₹349</p>
+        <div class="rating">⭐ 4.6</div>
+        <button class="btn">Add to Cart</button>
+        <button class="wishlist">♡ Wishlist</button>
       </div>
+
       <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1620949612303-ef6a0f1480b6?fit=crop&w=500&q=80" alt="Rose Candle">
+        <img src="images/image3.png.png" alt="Rose Romance Candle">
         <h3>Rose Romance</h3>
-        <p>Elegant rose fragrance. Perfect for gifting. 180g – ₹299</p>
+        <p>₹379</p>
+        <div class="rating">⭐ 4.9</div>
+        <button class="btn">Add to Cart</button>
+        <button class="wishlist">♡ Wishlist</button>
       </div>
+
+      <!-- You can add more products here following the same structure -->
+
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 GlowCandle. All rights reserved.</p>
+    <p>&copy; 2025 Flameies. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
