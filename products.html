@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Flameies - Products</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <script defer src="script.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <script defer src="wishlist.js"></script>
 </head>
 <body>
 
   <header>
     <div class="logo">
-      <img src="images/logo.png.jpeg" alt="Flameies Logo">
+      <img src="images/logo.png.jpeg" alt="Flameies Logo" />
       <h1>Flameies</h1>
     </div>
     <nav>
       <a href="index.html">Home</a>
       <a href="products.html" class="active">Products</a>
       <a href="cart.html">Cart</a>
+      <a href="wishlist.html" id="wishlistLink">♡ Wishlist</a>
       <a href="contact.html">Contact</a>
     </nav>
   </header>
@@ -30,35 +31,65 @@
 
       <!-- Product 1 -->
       <div class="product-card">
-        <img src="images/image1.png.png" alt="Lavender Bliss Candle">
+        <img src="images/image1.png.png" alt="Lavender Bliss Candle" />
         <h3>Lavender Bliss</h3>
         <p>₹299</p>
         <div class="rating">⭐ 4.8</div>
         <a href="product1.html" class="view-details">View Details</a>
-        <button class="btn">Add to Cart</button>
-        <button class="wishlist">♡ Wishlist</button>
+        <button 
+          onclick="addToCart(1, 'Lavender Bliss', 299, 'images/image1.png.png')" 
+          class="btn"
+        >Add to Cart</button>
+        <button 
+          class="wishlist" 
+          data-id="1" 
+          data-name="Lavender Bliss" 
+          data-price="299" 
+          data-image="images/image1.png.png"
+          onclick="toggleWishlistFromButton(this)"
+        >♡ Wishlist</button>
       </div>
 
       <!-- Product 2 -->
       <div class="product-card">
-        <img src="images/image2.png.png" alt="Vanilla Dream Candle">
+        <img src="images/image2.png.png" alt="Vanilla Dream Candle" />
         <h3>Vanilla Dream</h3>
         <p>₹349</p>
         <div class="rating">⭐ 4.6</div>
         <a href="product2.html" class="view-details">View Details</a>
-        <button class="btn">Add to Cart</button>
-        <button class="wishlist">♡ Wishlist</button>
+        <button 
+          onclick="addToCart(2, 'Vanilla Dream', 349, 'images/image2.png.png')" 
+          class="btn"
+        >Add to Cart</button>
+        <button 
+          class="wishlist" 
+          data-id="2" 
+          data-name="Vanilla Dream" 
+          data-price="349" 
+          data-image="images/image2.png.png"
+          onclick="toggleWishlistFromButton(this)"
+        >♡ Wishlist</button>
       </div>
 
       <!-- Product 3 -->
       <div class="product-card">
-        <img src="images/image3.png.png" alt="Rose Romance Candle">
+        <img src="images/image3.png.png" alt="Rose Romance Candle" />
         <h3>Rose Romance</h3>
         <p>₹379</p>
         <div class="rating">⭐ 4.9</div>
         <a href="product3.html" class="view-details">View Details</a>
-        <button class="btn">Add to Cart</button>
-        <button class="wishlist">♡ Wishlist</button>
+        <button 
+          onclick="addToCart(3, 'Rose Romance', 379, 'images/image3.png.png')" 
+          class="btn"
+        >Add to Cart</button>
+        <button 
+          class="wishlist" 
+          data-id="3" 
+          data-name="Rose Romance" 
+          data-price="379" 
+          data-image="images/image3.png.png"
+          onclick="toggleWishlistFromButton(this)"
+        >♡ Wishlist</button>
       </div>
 
     </div>
@@ -67,6 +98,17 @@
   <footer>
     <p>&copy; 2025 Flameies. All rights reserved.</p>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (typeof updateWishlistButtons === 'function') {
+        updateWishlistButtons();
+      }
+      if (typeof updateWishlistStatus === 'function') {
+        updateWishlistStatus();
+      }
+    });
+  </script>
 
 </body>
 </html>
